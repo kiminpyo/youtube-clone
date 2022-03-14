@@ -84,4 +84,4 @@ function Register() {
   )
 }
 
-export default auth(Register, false)
+export default auth(Register, null)

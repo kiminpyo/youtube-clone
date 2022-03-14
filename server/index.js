@@ -8,6 +8,8 @@ const {auth} = require('./middleware/auth');
 const {User} = require("./models/User");
 
 
+
+/* app.use('api/video', require('./video')) */
 //application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
     extended: true

@@ -8,9 +8,13 @@ function LeftMenu(props) {
     <Menu mode={props.mode}>
     <Menu.Item 
      key="mail">
-      <a href="/">소통 창구</a>
+      <a href="/notice">소통 창구</a>
     </Menu.Item>
-    <SubMenu title={<span>기술 뉴스</span>}>
+    <Menu.Item 
+     key="upload">
+      <a href="/video/upload">업로드</a>
+    </Menu.Item>
+    <SubMenu title={<span> <a href="/news">기술 뉴스</a></span>}>
       <MenuItemGroup title="Item 1">
         <Menu.Item key="setting:1">Option 1</Menu.Item>
         <Menu.Item key="setting:2">Option 2</Menu.Item>

@@ -18,7 +18,11 @@ function NavBar() {
   return (
     <nav className="menu" style={{ position: 'fixed', zIndex: 5, width: '100%' }}>
       <div className="menu__logo">
-        <a href="/"><h2>gachi. <br /><div style={{fontSize: '4px'}}>가치코딩</div> </h2>
+        <a href="/">
+            <h2>gachi. <br />
+              <div style={{fontSize: '4px'}}>가치코딩
+              </div> 
+            </h2>
                     
           </a>
       </div>

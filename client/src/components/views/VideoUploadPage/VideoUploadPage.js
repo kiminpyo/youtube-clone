@@ -1,4 +1,4 @@
-import TextArea from 'antd/lib/input/TextArea'
+
 import React, {useState} from 'react'
 import auth from '../../../hoc/auth'
 import axios  from 'axios'
@@ -7,7 +7,7 @@ import {PlusOutlined} from'@ant-design/icons'
 import Dropzone from 'react-dropzone'
 
   
-   TextArea = Input;
+const {TextArea} = Input;
 const { Title} = Typography;
 
 const PrivateOptions = [
@@ -48,31 +48,32 @@ function VideoUploadPage() {
     console.log(e)
     setCategory(e.currentTarget.value)
   }
+  
   const onDrop = (files) => {
 
-    let formData = new FormData;
-    //파일보낼 때 안하면 오류생긴다.
-    const config ={
-    header:{'content-type' : 'multipart/form-data'}
+    let formData = new FormData();
+    const config = {
+        header: { 'content-type': 'multipart/form-data' }
     }
+    console.log(files)
     formData.append("file", files[0])
 
-      console.log(files)
-    
-      axios.post('/api/video/uploadfiles', formData, config)
-    .then(response =>{
-      if(response.data.success){
-        console.log(response.data)
-      }else{
-        alert('비디오 업로드 실패')
-      }
-    })
-  }
+    axios.post('/api/video/uploadfiles', formData, config)
+        .then(response => {
+            if (response.data.success) {
+                console.log('sucess post')
+
+            } else {
+                alert('failed to save the video in server')
+            }
+        })
+
+}
 
 
 
 
-  return (
+return (
     <div style={{maxWidth: '700px', margin: '2rem auto'}}>
         <div style={{textAlign: 'center', marginBottom: '2rem'}}>
             <Title level={2}>Upload Video</Title>
@@ -100,7 +101,7 @@ function VideoUploadPage() {
             
               {/* Tumbnail */}
               <div>
-                <img src alt/>
+                {/* <img src alt/> */}
               </div>
             </div>
           <br/>

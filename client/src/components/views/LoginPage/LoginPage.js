@@ -62,4 +62,4 @@ function LoginPage() {
   )
 }
 
-export default auth(LoginPage, false)
+export default auth(LoginPage, null)

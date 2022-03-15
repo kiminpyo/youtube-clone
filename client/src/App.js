@@ -11,6 +11,8 @@ import {
   import VideoUploadPage from "./components/views/VideoUploadPage/VideoUploadPage";
   import NavBar from "./components/views/NavBar/NavBar";
   import NoticePage from "./components/views/NoticePage/NoticePage";
+  import NewsPage from "./components/views/NewsPage/NewsPage";
+  
   function App() {
   
     return (
@@ -28,6 +30,7 @@ false ==> 유저는 못들어감 */
       <Route exact path="/video/upload" element = {<VideoUploadPage/> }/>
       <Route exact path="/login" element = {<LoginPage/>}/>
       <Route exact path="/register" element = {<RegisterPage/>}/>
+      <Route exact path="/news" element = {<NewsPage/>}/>
       
       </Routes>
       </div>

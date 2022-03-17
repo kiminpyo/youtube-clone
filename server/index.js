@@ -9,7 +9,7 @@ const {User} = require("./models/User");
 
 
 
-/* app.use('api/video', require('./video')) */
+app.use('/api/video', require('./video'));
 //application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
     extended: true
@@ -99,7 +99,7 @@ app.get('/api/users/auth', auth , ( req, res) => {
         _id: req.user._id,
         //role = 0이면 일반유저, 아니면 관리자 일단
         isAdmin: req.user.role === 0 ? false : true,
-        isAuth: true,
+        isAuth: true, 
         email: req.user.email,
         name: req.user.name,
         lastname: req.user.lastname,

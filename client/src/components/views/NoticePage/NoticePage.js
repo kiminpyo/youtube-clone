@@ -45,4 +45,4 @@ function NoticePage() {
   )
 }
 
-export default auth(NoticePage, null)
+export default NoticePage
